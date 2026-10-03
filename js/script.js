@@ -99,7 +99,7 @@ const formNote = document.getElementById("formNote");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function (event) {
+    contactForm.addEventListener("submit", async function (event) {
 
         event.preventDefault();
 
@@ -107,6 +107,8 @@ if (contactForm) {
         const email = document.getElementById("email").value.trim();
         const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const submitLabel = submitButton.querySelector(".contact-submit-label");
 
 
         if (!name || !email || !subject || !message) {
@@ -119,14 +121,37 @@ if (contactForm) {
             return;
         }
 
-
-        formNote.textContent =
-            "Your message has been prepared. Email sending will be connected later.";
-
+        submitButton.disabled = true;
+        submitLabel.textContent = "Sending...";
+        formNote.textContent = "Sending your message...";
         formNote.style.color = "#00aeff";
 
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({ name, email, subject, message })
+            });
+            const result = await response.json();
 
-        contactForm.reset();
+            if (!response.ok) {
+                throw new Error(result.message || "Your message could not be sent. Please try again.");
+            }
+
+            formNote.textContent = result.message;
+            formNote.style.color = "#00aeff";
+            contactForm.reset();
+        } catch (error) {
+            formNote.textContent =
+                error.message || "Unable to send your message. Please try again.";
+            formNote.style.color = "#ff7b7b";
+        } finally {
+            submitButton.disabled = false;
+            submitLabel.textContent = "Send Message";
+        }
 
     });
 

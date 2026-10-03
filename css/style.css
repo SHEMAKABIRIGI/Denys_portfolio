@@ -2601,7 +2601,7 @@ main section h2 {
 }
 
 
-.contact-submit span {
+.contact-submit > span:not(.contact-submit-label) {
     font-size: 18px;
 
     transition:
@@ -2619,7 +2619,7 @@ main section h2 {
 }
 
 
-.contact-submit:hover span {
+.contact-submit:hover > span:not(.contact-submit-label) {
     transform: translateX(5px);
 }
 
