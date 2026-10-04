@@ -20,6 +20,8 @@
 
 
     <header class="header">
+        <div class="page-progress" aria-hidden="true"></div>
+
         <nav class="navbar">
 
             <!-- Logo / Name -->
@@ -50,6 +52,10 @@
                 </li>
 
                 <li>
+                    <a href="#process">Process</a>
+                </li>
+
+                <li>
                     <a href="#education">Education</a>
                 </li>
 
@@ -59,7 +65,7 @@
             </ul>
 
             <!-- Mobile Menu Button -->
-            <button class="menu-toggle" aria-label="Open navigation menu">
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
 
@@ -70,8 +76,6 @@
     <!-- ================= MAIN CONTENT ================= -->
     <main>
 
-        <!-- Temporary sections.
-             We will replace these with the real sections later. -->
 
         <!-- ================= HERO SECTION ================= -->
         <section class="hero" id="home">
@@ -1159,6 +1163,72 @@
 
         </section>
 
+        <!-- ================= PROCESS SECTION ================= -->
+        <section class="process-section" id="process">
+
+            <div class="section-container">
+
+                <div class="section-header">
+
+                    <p class="section-label">
+                        HOW I WORK
+                    </p>
+
+                    <h2>
+                        From idea to <span>impact</span>
+                    </h2>
+
+                    <p class="section-subtitle">
+                        A simple, collaborative process keeps every project clear,
+                        purposeful, and moving in the right direction.
+                    </p>
+
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-step">
+                        <span class="process-step-number">01</span>
+                        <div class="process-step-icon">
+                            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                        </div>
+                        <h3>Understand the goal</h3>
+                        <p>
+                            We start with the people, problem, and goals so the
+                            solution is built around what matters.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-step-number">02</span>
+                        <div class="process-step-icon">
+                            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                        </div>
+                        <h3>Design &amp; build</h3>
+                        <p>
+                            I shape the idea into a responsive, accessible
+                            experience and build it with care.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="process-step-number">03</span>
+                        <div class="process-step-icon">
+                            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <h3>Test &amp; refine</h3>
+                        <p>
+                            We review the details, improve what needs work,
+                            and prepare the result for launch.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
         <!-- ================= EDUCATION SECTION ================= -->
         <section class="education-section" id="education">
 
@@ -1487,8 +1557,6 @@
 
 
 
-    <script src="js/script.js"></script>
-
     <!-- ================= FOOTER ================= -->
     <footer class="site-footer">
 
@@ -1558,6 +1626,12 @@
                         <li>
                             <a href="#services">
                                 Services
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#process">
+                                Process
                             </a>
                         </li>
 
@@ -1702,6 +1776,7 @@
 
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
