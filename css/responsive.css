@@ -572,13 +572,13 @@
 
 @media (max-width: 550px) {
 
-    .form-row {
-        grid-template-columns: 1fr;
+    .contact-cta-card {
+        padding: 30px 23px;
     }
 
 
-    .contact-form-container {
-        padding: 23px 18px;
+    .contact-cta-card h3 {
+        font-size: 22px;
     }
 
 

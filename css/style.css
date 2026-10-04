@@ -2454,13 +2454,25 @@ main section h2 {
 
 
 /* =========================================
-   CONTACT FORM
+   DIRECT CONTACT CARD
 ========================================= */
 
-.contact-form-container {
-    padding: 35px;
+.contact-cta-card {
+    display: flex;
 
-    background-color: rgba(255, 255, 255, 0.025);
+    min-height: 100%;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 42px;
+
+    background:
+        radial-gradient(ellipse at top right, rgba(0, 174, 255, 0.1), transparent 55%),
+        rgba(255, 255, 255, 0.025);
 
     border: 1px solid rgba(255, 255, 255, 0.07);
 
@@ -2468,131 +2480,88 @@ main section h2 {
 }
 
 
-.contact-form {
-    display: flex;
+.contact-cta-icon {
+    width: 52px;
 
-    flex-direction: column;
+    height: 52px;
 
-    gap: 22px;
-}
-
-
-/* =========================================
-   FORM ROW
-========================================= */
-
-.form-row {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 18px;
-}
-
-
-/* =========================================
-   FORM GROUP
-========================================= */
-
-.form-group {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 9px;
-}
-
-
-.form-group label {
-    color: #aab5be;
-
-    font-size: 12px;
-
-    font-weight: 600;
-}
-
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-
-    padding: 14px 15px;
-
-    color: #e4ebf0;
-
-    background-color: rgba(255, 255, 255, 0.025);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    border-radius: 5px;
-
-    outline: none;
-
-    font-family: inherit;
-
-    font-size: 13px;
-
-    transition:
-        border-color 0.3s ease,
-        background-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #4f5b65;
-}
-
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: rgba(0, 174, 255, 0.55);
-
-    background-color: rgba(0, 174, 255, 0.025);
-
-    box-shadow:
-        0 0 0 3px rgba(0, 174, 255, 0.05);
-}
-
-
-.form-group textarea {
-    resize: vertical;
-
-    min-height: 150px;
-}
-
-
-/* =========================================
-   SUBMIT BUTTON
-========================================= */
-
-.contact-submit {
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    gap: 15px;
+    margin-bottom: 24px;
 
-    padding: 15px 25px;
+    color: #25d366;
+
+    background-color: rgba(37, 211, 102, 0.1);
+
+    border: 1px solid rgba(37, 211, 102, 0.2);
+
+    border-radius: 8px;
+
+    font-size: 26px;
+}
+
+
+.contact-cta-eyebrow {
+    margin-bottom: 10px;
+
+    color: #25d366;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.contact-cta-card h3 {
+    margin-bottom: 13px;
 
     color: #ffffff;
 
-    background-color: #00aeff;
+    font-size: 25px;
+}
 
-    border: none;
+
+.contact-cta-card > p {
+    max-width: 400px;
+
+    margin-bottom: 25px;
+
+    color: #7f8b96;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.contact-whatsapp-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 19px;
+
+    color: #07120b;
+
+    background-color: #25d366;
 
     border-radius: 5px;
-
-    cursor: pointer;
-
-    font-family: inherit;
 
     font-size: 13px;
 
     font-weight: 700;
+
+    text-decoration: none;
 
     transition:
         background-color 0.3s ease,
@@ -2601,39 +2570,28 @@ main section h2 {
 }
 
 
-.contact-submit > span:not(.contact-submit-label) {
-    font-size: 18px;
-
-    transition:
-        transform 0.3s ease;
-}
-
-
-.contact-submit:hover {
-    background-color: #008ed0;
+.contact-whatsapp-button:hover {
+    background-color: #20bd5a;
 
     transform: translateY(-2px);
 
-    box-shadow:
-        0 10px 25px rgba(0, 174, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.18);
 }
 
 
-.contact-submit:hover > span:not(.contact-submit-label) {
-    transform: translateX(5px);
+.contact-whatsapp-button:focus-visible {
+    outline: 2px solid #ffffff;
+
+    outline-offset: 4px;
 }
 
 
-/* =========================================
-   FORM NOTE
-========================================= */
+.contact-cta-note {
+    margin-top: 16px;
 
-.form-note {
-    color: #4f5b65;
+    color: #596671;
 
-    font-size: 11px;
-
-    text-align: center;
+    font-size: 12px;
 }
 
 /* =========================================
