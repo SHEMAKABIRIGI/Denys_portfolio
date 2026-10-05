@@ -26,6 +26,26 @@
         padding: 0 20px;
     }
 
+    .brand-logo {
+        width: 32px;
+
+        height: 32px;
+    }
+
+
+    .logo {
+        gap: 8px;
+
+        font-size: 20px;
+    }
+
+
+    .footer-brand-logo {
+        width: 42px;
+
+        height: 42px;
+    }
+
     /* Show hamburger */
 
     .menu-toggle {
@@ -268,21 +288,30 @@
 @media (max-width: 1000px) {
 
     .about-content {
+        display: grid;
         grid-template-columns: 1fr;
-
-        gap: 60px;
+        gap: 20px;
     }
 
-
-    .about-image-container {
-        max-width: 350px;
+    .about-visual {
+        min-height: auto;
     }
 
+    .about-logo {
+        width: 190px;
+        max-width: 100%;
+        height: 260px;
+    }
 
     .about-text {
         max-width: 750px;
 
         margin: 0 auto;
+    }
+
+
+    .about-details {
+        grid-template-columns: 1fr 1fr;
     }
 
 }
@@ -309,23 +338,10 @@
         font-size: 14px;
     }
 
-
-    .about-image-container {
-        max-width: 290px;
+    .about-logo {
+        width: 160px;
+        height: 220px;
     }
-
-
-    .about-image {
-        height: 370px;
-    }
-
-
-    .about-image-border {
-        top: 12px;
-
-        left: 12px;
-    }
-
 
     .about-text .about-introduction {
         font-size: 17px;
